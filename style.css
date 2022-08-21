@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* css grid master today practice again and again  */
+
+
+
+
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: hsl(226, 43%, 10%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    width: 80vw;
+    height: 520px;
+
+}
+
+
+.undr {
+    width: 230px;
+    height: 200px;
+    background-color: hsl(235, 46%, 20%);
+    position: relative;
+    border-radius: 15px;
+    gap: 10px 10px;
+    padding: 25px 20px 20px 30px;
+    color: #fff;
+    
+
+}
+
+.undr:hover{
+    background-color: hsl(235, 45%, 61%);
+}
+
+.undr::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 80px;
+    border-radius: 15px;
+    background-color: yellow;
+    left: 0px;
+    top: -40px;
+    z-index: -1;
+}
+
+
+.profile {
+    height: 500px;
+    margin-top: -39px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: transparent;
+    padding: 0px 0px;
+    position: relative;
+}
+.profile:hover{
+    background: none;
+}
+
+.profile::after {
+    display: none;
+}
+
+
+.avtar {
+    width: 230px;
+    height: 340px;
+    border-radius: 15px;
+    background-color: hsl(246, 80%, 60%);
+    margin-bottom: -20px;
+    padding: 20px;
+    z-index: 1;
+    position: absolute;
+}
+
+.avtar img {
+    width: 80px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin-bottom: 35px;
+}
+.name p{
+    font-weight: normal;
+}
+.name h1{
+    font-weight: 100;
+    font-size: 38px;
+}
+
+.plan {
+    background-color:  hsl(235, 46%, 20%);
+    border-radius: 15px;
+    padding: 70px 15px 15px 20px;
+    margin-top: -20px;
+    width: 230px;
+    height: 200px;
+    position: absolute;
+    margin-top: 290px;
+
+}
+
+.plan ul li {
+    list-style: none;
+    padding: 5px 0px;
+    cursor: pointer;
+    z-index: 999;
+    color: hsl(235, 45%, 61%);
+    font-size: 18px;
+
+}
+.plan ul li:hover{
+  color: #fff;
+
+}
+
+
+
+.work::after {
+    background: url('/images/icon-work.svg') no-repeat right 15px top -10px, hsl(15, 100%, 70%);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.navbar img{
+    cursor: pointer;
+}
+.tracker {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+
+}
+
+.tracker h1 {
+    font-size: 52px;
+    font-weight: 100;
+}
+
+.tracker p {
+    font-size: 18px;
+    padding-top: 10px;
+    font-weight: 100;
+    color: hsl(236, 100%, 87%);
+}
+
+.play::after {
+    background: url('/images/icon-play.svg') no-repeat right 15px top -10px, hsl(195, 74%, 62%);
+}
+
+
+.study::after {
+    background: url('/images/icon-study.svg') no-repeat right 15px top -10px, hsl(348, 100%, 68%);
+}
+
+.exercise::after {
+    background: url('/images/icon-exercise.svg') no-repeat right 15px top -5px, hsl(145, 58%, 55%);
+}
+
+
+.social::after {
+    background: url('/images/icon-social.svg') no-repeat right 15px top -10px, hsl(264, 64%, 52%);
+}
+
+
+.self-care::after {
+    background: url('/images/icon-self-care.svg') no-repeat right 15px top -10px, hsl(43, 84%, 65%);
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  
+   .container{
+    grid-template-columns:  1fr;
+    grid-template-rows: repeat(7, auto);
+    width: 350px;
+    height: auto;
+    padding: 50px 0px 50px 0px;
+
+    
+
+   }
+
+   .undr {
+    width: 100%;
+    height: 150px;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+
+.undr::after {
+    width: 100%;
+    height: 50px;
+    top: -30px;
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tracker {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.tracker p{
+    font-size: 16px;
+}
+
+
+.tracker h1 {
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.profile {
+    height: 200px;
+    margin-top: 0px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-color: transparent;
+    padding: 0px 0px;
+    position: relative;
+
+}
+.profile:hover{
+    background: none;
+}
+
+
+
+
+.avtar {
+    width: 100%;
+    height: 135px;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+   
+}
+
+.avtar img {
+    width: 60px;
+    margin-bottom: 0px;
+    margin-right: 15px;
+}
+.name p{
+    font-weight: 100;
+}
+.name h1{
+    font-size: 28px;
+}
+
+.plan {
+    padding: 36px 15px 15px 15px;
+    margin-top: -20px;
+    width: 100%;
+    height: 83px;
+    position: absolute;
+    margin-top: 115px
+}
+
+.plan ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+
+
+
+
+    
+}
+@media only screen and (max-width: 400px) {
+  
+   .container{
+    grid-template-columns:  1fr;
+    grid-template-rows: repeat(7, auto);
+    width: 340px;
+    margin: 0px 10px;
+    height: auto;
+    padding: 50px 0px 50px 0px;
+   }
+    
+}
+@media only screen and (max-width: 350px) {
+  
+   .container{
+    grid-template-columns:  1fr;
+    grid-template-rows: repeat(7, auto);
+    width: 300px;
+    margin: 0px 10px;
+    height: auto;
+    padding: 50px 0px 50px 0px;
+   }
+    
+}
+.color{
+    color: #fff !important;
+}
+
+
+
+
